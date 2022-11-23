@@ -1,11 +1,7 @@
 
 
-
-
-
-
 async function myname() {
-    return console.log("Hello");;
+    return console.log("Hello world");;
 }
 
 myname().then(
