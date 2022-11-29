@@ -3,27 +3,15 @@
 
 
 
-let ready =true;
-
-const checker = new Promise((res,rej) => {
-    if (ready){
-        const markReady = 'this is the result';
-        res(markReady);
-    } else{
-        const markNot = 'still working on it ';
-        res(markNot)
-    }
+const promise = new Promise((resolve, reject) => {  
+        resolve('Promise is resolved successfully.');  
+        reject('Promise is rejected');  
 });
-
-console.log(checker);
-
-
-const check1 = () =>{
-    checker.then(val => {
-        console.log(val);
-    }) .catch(err => {
-        console.log(err);
-    })
-}
-
-check1();
+promise.then(
+    (result) => { 
+       console.log(result);
+    },
+    (error) => { 
+       console.log(error);
+    }
+);
